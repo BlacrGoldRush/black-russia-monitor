@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: black-russia-monitor
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: BOT_TOKEN
+        value: 8353596700:AAGGBzOlnQZepaq0lnXys4KlQNKozJpXq7A
+      - key: CHAT_ID
+        value: "5316017487"
